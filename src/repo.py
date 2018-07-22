@@ -20,3 +20,7 @@ def format_game_stats_in_unicode(per_game_stats):
             formatted_game_stats.append(formatted_stat)
         formatted_per_game_stats.append(formatted_game_stats)
     return formatted_per_game_stats
+
+def get_player_per_game_stats(player_id):
+    filename = player_id + ".csv"
+    return os.path.join(os.path.dirname(os.path.realpath(__file__)),"storage", filename)
